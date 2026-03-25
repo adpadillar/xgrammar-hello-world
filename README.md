@@ -1,0 +1,1 @@
+Run `uv sync`, then `uv run main.py`
