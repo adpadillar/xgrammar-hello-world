@@ -1,5 +1,4 @@
 import warnings
-import logging
 from pydantic import BaseModel
 
 # Silence the RoPE warnings and transformers loading clutter
@@ -18,7 +17,7 @@ class ChatResponse(BaseModel):
 
 def main():
     device = "mps" if torch.backends.mps.is_available() else "cpu"
-    model_name = "microsoft/Phi-4-mini-instruct"
+    model_name = "microsoft/Phi-4-mini-instruct" # meta-llama/Llama-3.2-3B-Instruct
     
     print("Loading model and compiling grammar... (this takes a few seconds)")
     
